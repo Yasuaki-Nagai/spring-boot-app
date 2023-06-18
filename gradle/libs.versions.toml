@@ -1,0 +1,22 @@
+[versions]
+springBootVersion = "3.1.0"
+springDependencyManagementVersion = "1.1.0"
+kotlinVersion = "1.8.21"
+jacksonModuleKotlinVersion = "2.15.2"
+h2Version = "2.1.214"
+
+[libraries]
+springBootStarterWeb = { group = "org.springframework.boot", name="spring-boot-starter-web", version.ref="springBootVersion" }
+springBootStarterDataJpa = { group = "org.springframework.boot", name="spring-boot-starter-data-jpa", version.ref="springBootVersion" }
+jacksonModuleKotlin = { group = "com.fasterxml.jackson.module", name="jackson-module-kotlin", version.ref="jacksonModuleKotlinVersion" }
+kotlinReflect = { group = "org.jetbrains.kotlin", name="kotlin-reflect", version.ref="kotlinVersion" }
+springBootDevtools = { group = "org.springframework.boot", name="spring-boot-devtools", version.ref="springBootVersion" }
+h2 = { group = "com.h2database", name="h2", version.ref="h2Version" }
+
+springBootStarterTest = { group = "org.springframework.boot", name="spring-boot-starter-test", version.ref="springBootVersion" }
+
+[plugins]
+springBoot = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+springDependency = { id = "io.spring.dependency-management", version.ref = "springDependencyManagementVersion" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlinVersion" }
+kotlinSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlinVersion"}
